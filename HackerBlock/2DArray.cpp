@@ -18,4 +18,14 @@ void wavePrint(int a[][10],int R, int C){
   }
   else {
   //even columns
-  for(int i=0;
+  for(int i=0;i<R;i++){
+    cout<<a[i][j];<<" ";
+  }
+  }
+  }
+    
+    int main(){
+    int a[][10], R,C;
+      cin>>R>>C;
+      wavePrint(a,R,C);
+    }
