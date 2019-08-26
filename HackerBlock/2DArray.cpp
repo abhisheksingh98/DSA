@@ -24,6 +24,26 @@ void wavePrint(int a[][10],int R, int C){
   }
   }
     
+    
+    void spiralPrint(int a[][10], int R, int C){
+  int startRow =0, endRow = R-1, startCol= 0, endCol = C-1;
+
+  while(startRow<=endRow&& startCol<=endCol){
+    //Print startrow first
+    for(int j=startCol;j<=endCol;j++){
+      cout<<a[startRow][j]<<" ";
+    }
+    startRow++;
+
+    for(int i=startRow;i<=endRow;i++){
+      cout<<a[i][endCol]<<" ";
+    }
+    endCol--;
+  }
+
+}
+
+    
     int main(){
     int a[][10], R,C;
       cin>>R>>C;
