@@ -39,8 +39,24 @@ void wavePrint(int a[][10],int R, int C){
       cout<<a[i][endCol]<<" ";
     }
     endCol--;
+//Print endRow - make sure it is printed if endrow>startrow
+  if(endRow>startRow) {
+
+  for(int j=endCol;j>=startCol;j--){
+    cout<<a[endRow][j]<<" ";
+  }
+  endRow--;
+  }
+  //Print startcol
+  if(startCol<endCol){
+    
+  for(int i = endRow;i>=startRow;i--){
+    cout<<a[i][startCol]<<" ";
+  }
+  startCol++;
   }
 
+}
 }
 
     
@@ -48,4 +64,5 @@ void wavePrint(int a[][10],int R, int C){
     int a[][10], R,C;
       cin>>R>>C;
       wavePrint(a,R,C);
+      spiralPrint(a,R,C);
     }
