@@ -48,3 +48,17 @@ void findTriplets(int *arr, int n , int sum) {
         }
     }
 }
+
+int main() {
+	int n, sum;
+	int arr[1000];
+	
+	    cin>>n;
+	    for(int i=0; i<n; i++) {
+    	    cin>>arr[i];   
+    	}
+    	cin>>sum;
+    	sort(arr, arr+n);
+    	findTriplets(arr, n, sum);
+	return 0;
+}
