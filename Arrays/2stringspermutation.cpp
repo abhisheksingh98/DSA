@@ -25,3 +25,10 @@ bool checkPermutationOrNot(string s1, string s2) {
     }
     return true;
 }
+int main() {
+	string s1 = "hello";
+	string s2 = "hello";
+	
+	cout<<checkPermutationOrNot(s1, s2);
+	return 0;
+}
