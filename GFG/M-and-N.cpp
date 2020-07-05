@@ -25,3 +25,37 @@ int main()
 }
 
 //--------------------------------------------------------------------------
+//Another Approach
+
+using namespace std;
+
+int num(int a)
+{
+    int count=0;
+    while(a!=0)
+    {
+        a=a/10;
+        count++;
+    }
+    return count;
+}
+
+int main() {
+	int t=0;
+	cin>>t;
+	while(t--)
+	{
+	    int m,n;
+	    cin>>m;
+	    cin>>n;
+	    if(num(n)==num(m+n))
+	    {
+	        cout<<n<<endl;
+	    }
+	    else
+	    {
+	        cout<<m+n<<endl;
+	    }
+	}
+	return 0;
+}
