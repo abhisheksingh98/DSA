@@ -3,7 +3,10 @@ class Solution {
         int maxSubarray(vector<int>& nums){
             int sum = 0;
             int maximum = nums[0];
+            // int maximum = INT_MIN;
 
+            // for(auto it : nums){
+            // sum+=it;
             for(int i=0;i<nums.size();i++){
                 sum+=nums[i];
                 maximum = max(sum,maximum);
