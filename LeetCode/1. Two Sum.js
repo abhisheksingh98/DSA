@@ -38,3 +38,13 @@ const twoSum = function(nums, target){
     }
     return null;
 }
+
+// Optimized Solution using JS methods
+
+const twoSum = function(nums, target){
+    for(let i = 0; i < nums.length; i++){
+        if(nums.includes(target - nums[i]) && nums.indexOf(target - nums[i]) !== i){
+            return [i, nums.indexOf(target - nums[i])]
+        }
+    }
+}
