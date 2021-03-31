@@ -21,3 +21,20 @@ const twoSum = function(nums, target){
     }
     return null;
 }
+
+// Optimized Solution using HashMap - O(n)
+
+const twoSum = function(nums, target){
+    const numsMap = {};
+    for(let i =0;i< nums.length; i++){
+        const currentMapVal = numsMap[nums[i]];
+        if(currentMapVal >=0){
+            return [currentMapVal,i];
+        }
+        else {
+            const numToFind = target - nums[i];
+            numsMap[numToFind] = i;
+        }
+    }
+    return null;
+}
